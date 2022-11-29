@@ -18,14 +18,16 @@ export default {
   },
   data() {
     return {
-      arrayFilms: []
+      arrayFilms: [],
+      arraySerie: [],
+      filmCercato: 'all'
     }
   },
 
   mounted()
   {    
     // console.clear();
-    axios.get('https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=all').then((response) =>
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
     {
       this.arrayFilms = response.data.results
       console.log(this.arrayFilms);
