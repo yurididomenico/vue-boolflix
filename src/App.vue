@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       arrayFilms: [],
-      arraySerie: [],
+      arraySeries: [],
       filmCercato: ''
     }    
   },
@@ -32,7 +32,12 @@ export default {
       {
         this.arrayFilms = "";
         this.arrayFilms = response.data.results;
-        console.log(this.arrayFilms);
+      })
+
+      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
+      {
+        this.arraySeries = "";
+        this.arraySeries = response.data.results;
       })
     }  
   },
