@@ -29,21 +29,28 @@ export default {
       //filmCercato prende il valore inserito nella barra di ricerca nell'Header
       this.filmCercato = valoreInput
 
-      //Axios Film
-      axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
-      {
-        this.arrayFilms = "";
-        this.arrayFilms = response.data.results;
-        console.log(this.arrayFilms)
-      })
 
-      //Axios Serie
-      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
+      if(this.filmCercato !== '')
       {
-        this.arraySeries = "";
-        this.arraySeries = response.data.results;
-        console.log(this.arraySeries)
-      })
+        //Axios Film
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}&page=3`).then((response) =>
+        {
+          this.arrayFilms = response.data.results
+          console.log(this.arrayFilms)
+        })
+
+        // Axios Serie
+        axios.get(`https://api.themoviedb.org/3/search/tv?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
+        {
+          this.arraySeries = "";
+          this.arraySeries = response.data.results;
+          console.log(this.arraySeries)
+        })
+      }
+      else
+      {
+        this.arrayFilms = []
+      }
     }  
   },
 
