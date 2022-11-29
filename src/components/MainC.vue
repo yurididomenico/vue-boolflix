@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <h1>Body Component</h1>
-        <FilmsC/>
+    <div class="text-white p-5">
+        <FilmsC :arrayFilms="arrayFilms"/>
         <SeriesC/>
     </div>
 </template>
@@ -13,6 +12,9 @@
 
     export default {
         name: 'MainC',
+        props: {
+            arrayFilms: Array
+        },
         components: {
             FilmsC,
             SeriesC
@@ -21,5 +23,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+    div
+    {
+        background-color: rgb(30, 30, 30);
+    }
 </style>

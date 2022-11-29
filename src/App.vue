@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column">
     <HeaderC @emitFilm="cercaFilm"/>
-    <MainC/>
+    <MainC class="flex-grow-1" :arrayFilms="arrayFilms"/>
   </div>
 </template>
 
@@ -26,34 +26,28 @@ export default {
 
   methods: {
     cercaFilm(valoreInput) {
+      //filmCercato prende il valore inserito nella barra di ricerca nell'Header
       this.filmCercato = valoreInput
 
+      //Axios Film
       axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
       {
         this.arrayFilms = "";
         this.arrayFilms = response.data.results;
+        console.log(this.arrayFilms)
       })
 
+      //Axios Serie
       axios.get(`https://api.themoviedb.org/3/search/tv?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
       {
         this.arraySeries = "";
         this.arraySeries = response.data.results;
+        console.log(this.arraySeries)
       })
     }  
   },
 
-  mounted()
-  {    
-    // console.clear();
-    
-  },
-
-  beforeUpdate()
-  {
-    
-
-  }
-
+  
 
 }
 

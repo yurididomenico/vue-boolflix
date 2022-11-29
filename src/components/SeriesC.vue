@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Body Component</h1>
-        <CartaC/>
+        <h1>Series Component</h1>
+        <CartaC :arrayFilms="arrayFilms" v-for="(elem, index) in arrayFilms" :key="index" :elem="elem"/>
     </div>
 </template>
 
@@ -10,6 +10,9 @@
 
     export default {
         name: 'SeriesC',
+        props: {
+            arrayFilms: Array
+        },
         components: {
             CartaC
         }
