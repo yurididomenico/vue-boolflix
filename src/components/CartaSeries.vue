@@ -10,7 +10,7 @@
                 <h5 class="card-text">Lingua:</h5>
                 <span>{{elem.original_language}}</span>
                 <h5 class="card-text">Voto:</h5>
-                <span>{{elem.vote_average}}</span>
+                <span>{{(elem.vote_average)}}</span>
             </div>
         </div>
     </div>

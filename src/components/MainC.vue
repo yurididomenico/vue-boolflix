@@ -1,8 +1,8 @@
 <template>
-    <div class="text-white p-5">
+    <main class="text-white p-5">
         <FilmsC :arrayFilms="arrayFilms"/>
         <SeriesC :arraySeries="arraySeries"/>
-    </div>
+    </main>
 </template>
 
 <script>
@@ -24,9 +24,10 @@
 </script>
 
 <style lang="scss" scoped>
-    div
+    main
     {
         background-color: rgb(30, 30, 30);
-        overflow-y: auto;
+        overflow: auto;
+        height: 94vh;
     }
 </style>

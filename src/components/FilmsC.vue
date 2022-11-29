@@ -7,6 +7,8 @@
             v-for="(elem, index) in arrayFilms"
             :key="index"
             :elem="elem"/>
+
+            
         </div>
     </div>
 </template>
