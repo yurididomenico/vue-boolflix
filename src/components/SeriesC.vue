@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="overflow">
         <h1>Series Component</h1>
-        <div class="d-flex flex-wrap p-3 mx-auto">
-            <CartaC 
-            :arraySeries="arraySeries"
+        <div class="d-flex p-3 mx-auto">
+            <CartaC class="mx-4"
+            :arraySeries="arrayCarte"
             v-for="(elem, index) in arraySeries"
             :key="index"
             :elem="elem"/>
@@ -26,5 +26,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .overflow
+    {
+        overflow-x: auto;
+    }
 </style>

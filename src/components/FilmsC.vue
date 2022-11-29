@@ -1,14 +1,13 @@
 <template>
-    <div class="Films">
+    <div class="overflow">
         <h1>Films Component</h1>
         <div class="d-flex p-3 mx-auto">
             <CartaC class="mx-4"
-            :arrayFilms="arrayFilms"
+            :arrayFilms="arrayCarte"
             v-for="(elem, index) in arrayFilms"
             :key="index"
             :elem="elem"/>
         </div>
-        
     </div>
 </template>
 
@@ -24,14 +23,11 @@
             CartaC
         }
     }
-
-    
 </script>
 
 <style lang="scss" scoped>
-    .Films
+    .overflow
     {
-        
-        overflow: auto;
+        overflow-x: auto;
     }
 </style>

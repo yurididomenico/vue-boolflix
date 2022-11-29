@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card text-dark">
+        <div class="card text-dark p-relative">
             <img :src="'http://image.tmdb.org/t/p/w500/'+elem.poster_path" class="card-img-top" alt="Immagine Copertina">
             <div class="card-body">
                 <h5 class="card-text">{{elem.title}}</h5>
@@ -16,7 +16,7 @@
     export default {
         name: 'CartaC',
         props: {
-            arrayFilms: Array,
+            arrayCarte: Array,
             elem: Object
         },
     }
