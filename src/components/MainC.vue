@@ -27,5 +27,6 @@
     div
     {
         background-color: rgb(30, 30, 30);
+        overflow-y: auto;
     }
 </style>

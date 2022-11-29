@@ -2,7 +2,7 @@
     <div class="overflow">
         <h1>Films</h1>
         <div class="d-flex p-3 mx-auto">
-            <CartaC class="mx-4"
+            <CartaFilms class="mx-4"
             :arrayFilms="arrayCarte"
             v-for="(elem, index) in arrayFilms"
             :key="index"
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import CartaC from './CartaC.vue'
+    import CartaFilms from './CartaFilms.vue'
 
     export default {
         name: 'FilmsC',
@@ -20,7 +20,7 @@
             arrayFilms: Array
         },
         components: {
-            CartaC
+            CartaFilms
         }
     }
 </script>

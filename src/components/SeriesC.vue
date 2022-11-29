@@ -2,7 +2,7 @@
     <div class="overflow">
         <h1>Series</h1>
         <div class="d-flex p-3 mx-auto">
-            <CartaC class="mx-4"
+            <CartaSeries class="mx-4"
             :arraySeries="arrayCarte"
             v-for="(elem, index) in arraySeries"
             :key="index"
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import CartaC from './CartaC.vue'
+    import CartaSeries from './CartaSeries.vue'
 
     export default {
         name: 'SeriesC',
@@ -20,7 +20,7 @@
             arraySeries: Array
         },
         components: {
-            CartaC
+            CartaSeries
         }
     }
 </script>
