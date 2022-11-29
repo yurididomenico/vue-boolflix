@@ -30,6 +30,9 @@
         &:hover .card-body
         {
             display: block;
+            background-color: black;
+            color: white;
+            width: 100%;
         }
 
         &:hover img
