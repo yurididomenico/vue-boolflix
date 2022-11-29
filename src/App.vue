@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderC/>
+    <HeaderC @nomeEmit="nomeMethods"/>
     <MainC/>
   </div>
 </template>
@@ -20,8 +20,15 @@ export default {
     return {
       arrayFilms: [],
       arraySerie: [],
-      filmCercato: 'all'
-    }
+      filmCercato: '',
+      
+    }    
+  },
+
+  methods: {
+    nomeMethods(valoreInput) {
+      this.filmCercato = valoreInput
+    }  
   },
 
   mounted()
