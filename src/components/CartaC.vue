@@ -26,5 +26,23 @@
     .card{
         width: calc(100vw / 8);
         height: 100%;
+
+        &:hover .card-body
+        {
+            display: block;
+        }
+
+        &:hover img
+        {
+            display: none;
+        }
+
+        
+
+        .card-body
+        {
+            display: none;
+        }
+
     }
 </style>
