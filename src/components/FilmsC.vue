@@ -1,6 +1,6 @@
 <template>
     <div class="overflow">
-        <h1>Films Component</h1>
+        <h1>Films</h1>
         <div class="d-flex p-3 mx-auto">
             <CartaC class="mx-4"
             :arrayFilms="arrayCarte"
