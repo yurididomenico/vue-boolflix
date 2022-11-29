@@ -24,7 +24,7 @@
 
 <style lang="scss" scoped>
     .card{
-        width: calc(100vw / 6);
-        aspect-ratio: 1/2;
+        width: calc(100vw / 8);
+        height: 100%;
     }
 </style>

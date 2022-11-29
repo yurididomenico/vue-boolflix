@@ -1,8 +1,12 @@
 <template>
-    <div>
+    <div class="Films">
         <h1>Films Component</h1>
-        <div class="d-flex flex-wrap p-3 mx-auto">
-            <CartaC :arrayFilms="arrayFilms" v-for="(elem, index) in arrayFilms" :key="index" :elem="elem"/>
+        <div class="d-flex p-3 mx-auto">
+            <CartaC class="mx-4"
+            :arrayFilms="arrayFilms"
+            v-for="(elem, index) in arrayFilms"
+            :key="index"
+            :elem="elem"/>
         </div>
         
     </div>
@@ -25,8 +29,9 @@
 </script>
 
 <style lang="scss" scoped>
-    div
+    .Films
     {
-        gap: 50px;
+        
+        overflow: auto;
     }
 </style>

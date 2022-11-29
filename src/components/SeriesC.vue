@@ -2,7 +2,11 @@
     <div>
         <h1>Series Component</h1>
         <div class="d-flex flex-wrap p-3 mx-auto">
-            <CartaC :arraySeries="arraySeries" v-for="(elem, index) in arraySeries" :key="index" :elem="elem"/>
+            <CartaC 
+            :arraySeries="arraySeries"
+            v-for="(elem, index) in arraySeries"
+            :key="index"
+            :elem="elem"/>
         </div>
     </div>
 </template>
