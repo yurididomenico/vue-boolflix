@@ -3,8 +3,8 @@
         <h1 class="text-danger ps-3">Boolflix</h1>
         <div class="input-group pe-5">
             <input type="text" class="form-control" placeholder="Cerca..." 
-            v-model="testoInput"
-            @keyup="$emit('nomeEmit', testoInput)">
+            v-model="inputFilm"
+            @keyup="$emit('emitFilm', inputFilm)">
         </div>
     </div>
 </template>
@@ -14,7 +14,7 @@
         name: 'HeaderC',
         data() {
             return {
-                testoInput: ''
+                inputFilm: ''
             }
         }
     }

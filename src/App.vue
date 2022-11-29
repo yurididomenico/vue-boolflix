@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderC @nomeEmit="nomeMethods"/>
+    <HeaderC @emitFilm="cercaFilm"/>
     <MainC/>
   </div>
 </template>
@@ -20,26 +20,36 @@ export default {
     return {
       arrayFilms: [],
       arraySerie: [],
-      filmCercato: '',
-      
+      filmCercato: ''
     }    
   },
 
   methods: {
-    nomeMethods(valoreInput) {
+    cercaFilm(valoreInput) {
       this.filmCercato = valoreInput
+
+      axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
+      {
+        this.arrayFilms = "";
+        this.arrayFilms = response.data.results;
+        console.log(this.arrayFilms);
+      })
     }  
   },
 
   mounted()
   {    
     // console.clear();
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0272325d7f8e506cee96f7395ca81340&query=${this.filmCercato}`).then((response) =>
-    {
-      this.arrayFilms = response.data.results
-      console.log(this.arrayFilms);
-    })
+    
+  },
+
+  beforeUpdate()
+  {
+    
+
   }
+
+
 }
 
 
