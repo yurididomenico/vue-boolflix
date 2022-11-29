@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="d-flex flex-column">
     <HeaderC @emitFilm="cercaFilm"/>
-    <MainC class="flex-grow-1" :arrayFilms="arrayFilms"/>
+    <MainC class="flex-grow-1" :arrayFilms="arrayFilms" :arraySeries="arraySeries"/>
   </div>
 </template>
 

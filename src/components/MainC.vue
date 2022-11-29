@@ -1,7 +1,7 @@
 <template>
     <div class="text-white p-5">
         <FilmsC :arrayFilms="arrayFilms"/>
-        <SeriesC/>
+        <SeriesC :arraySeries="arraySeries"/>
     </div>
 </template>
 
@@ -13,7 +13,8 @@
     export default {
         name: 'MainC',
         props: {
-            arrayFilms: Array
+            arrayFilms: Array,
+            arraySeries: Array
         },
         components: {
             FilmsC,
