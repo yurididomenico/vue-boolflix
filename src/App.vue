@@ -31,7 +31,6 @@ export default {
     {
       this.arrayFilms = response.data.results
       console.log(this.arrayFilms);
-    
     })
   }
 }
