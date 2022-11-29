@@ -1,12 +1,12 @@
 <template>
     <div>
         <div class="card text-dark" style="width: 18rem;">
-            <img src="../assets/logo.png" class="card-img-top" alt="Immagine Copertina">
+            <img :src="'http://image.tmdb.org/t/p/w500/'+elem.poster_path" class="card-img-top" alt="Immagine Copertina">
             <div class="card-body">
-                <h5 class="card-text">Titolo</h5>
-                <h5 class="card-text">Titolo Originale</h5>
-                <h5 class="card-text">Lingua</h5>
-                <h5 class="card-text">Voto</h5>
+                <h5 class="card-text">{{elem.title}}</h5>
+                <h5 class="card-text">{{elem.original_title}}</h5>
+                <h5 class="card-text">{{elem.original_lenguage}}</h5>
+                <h5 class="card-text">{{elem.vote_average}}</h5>
             </div>
         </div>
     </div>
