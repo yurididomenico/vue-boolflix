@@ -1,14 +1,12 @@
 <template>
-    <div class="overflow">
+    <div>
         <h1>Films</h1>
-        <div class="d-flex p-3 mx-auto">
+        <div class="d-flex p-3 mx-auto overflow">
             <CartaFilms class="mx-4"
-            :arrayFilms="arrayCarte"
+            :arrayFilms="arrayFilms"
             v-for="(elem, index) in arrayFilms"
             :key="index"
             :elem="elem"/>
-
-            
         </div>
     </div>
 </template>

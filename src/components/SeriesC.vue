@@ -1,9 +1,9 @@
 <template>
-    <div class="overflow">
+    <div>
         <h1>Series</h1>
-        <div class="d-flex p-3 mx-auto">
+        <div class="d-flex p-3 mx-auto overflow">
             <CartaSeries class="mx-4"
-            :arraySeries="arrayCarte"
+            :arraySeries="arraySeries"
             v-for="(elem, index) in arraySeries"
             :key="index"
             :elem="elem"/>
