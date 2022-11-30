@@ -10,7 +10,8 @@
                 <h5 class="card-text text-danger">Lingua:</h5>
                 <img :src="`https://www.countryflagicons.com/SHINY/32/${elem.original_language.toUpperCase()}.png`">
                 <h5 class="card-text text-danger">Voto:</h5>
-                <span>{{(elem.vote_average)}}</span>
+                <font-awesome-icon v-for="(elem) in funzioneVoto(elem)" :key="(elem.id)" icon="fa-solid fa-star" />
+                <font-awesome-icon v-for="(elem, index) in 5 - funzioneVoto(elem)" :key="(index)" icon="fa-regular fa-star" />
             </div>
         </div>
     </div>
@@ -28,7 +29,13 @@
             
         },
         methods: {
-            
+            funzioneVoto(elem)
+            {
+                let votoFix = parseInt(Math.round(elem.vote_average / 2) )
+                // console.log("This.elem: ", this.elem.id);
+                return votoFix;
+            },
+
             fixLingua(elem)
             {
                 if(this.elem.original_language == "en")

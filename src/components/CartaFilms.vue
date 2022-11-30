@@ -10,11 +10,9 @@
                 <h5 class="card-text text-danger mt-4">Lingua:</h5>
                 <img :src="`https://www.countryflagicons.com/SHINY/32/${elem.original_language.toUpperCase()}.png`">
                 <h5 class="card-text text-danger mt-4">Voto:</h5>
-                <span>{{elem.vote_average}}</span>
                 
-
-
-                <!-- <span>{{this.votoFix(elem)}}</span> -->
+                <font-awesome-icon v-for="(elem) in funzioneVoto(elem)" :key="(elem.id)" icon="fa-solid fa-star" />
+                <font-awesome-icon v-for="(elem, index) in 5 - funzioneVoto(elem)" :key="(index)" icon="fa-regular fa-star" />
             </div>
         </div>
     </div>
@@ -31,6 +29,12 @@
             this.fixLingua(this.elem)
         },
         methods: {
+            funzioneVoto(elem)
+            {
+                let votoFix = parseInt(Math.round(elem.vote_average / 2) )
+                // console.log("This.elem: ", this.elem.id);
+                return votoFix;
+            },
                        
             fixLingua(elem)
             {
