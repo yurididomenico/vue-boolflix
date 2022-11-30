@@ -10,7 +10,9 @@
                 <h5 class="card-text text-danger mt-4">Lingua:</h5>
                 <img :src="`https://www.countryflagicons.com/SHINY/32/${elem.original_language.toUpperCase()}.png`">
                 <h5 class="card-text text-danger mt-4">Voto:</h5>
-                <span>{{this.votoFix(elem)}}</span>
+                <span v-for="(x, index) in this.votoFix(this.elem)" :key="index" >[]</span>
+                <span v-for="(x, ind) in 5-this.votoFix(this.elem)" :key="ind" >-</span>
+                <!-- <span>{{this.votoFix(elem)}}</span> -->
             </div>
         </div>
     </div>
@@ -30,7 +32,8 @@
         methods: {
             votoFix(elem)
             {
-                let votoModificato = parseFloat(elem.vote_average / 2)
+                let votoModificato = parseInt(elem.vote_average / 2)
+                console.log(votoModificato);
                 return votoModificato;
             },
 
