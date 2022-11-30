@@ -25,6 +25,7 @@
         beforeUpdate()
         {
             this.fixLingua(this.elem)
+            
         },
         methods: {
             
